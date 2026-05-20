@@ -17,13 +17,20 @@ export type Project = {
   imageUrl?: string;
 };
 
+export type Experience = {
+  company: string;
+  role: string;
+  period: string;
+  bullets: string[];
+};
+
 export const profile = {
   name: "David Kuo",
-  headline: "Desarrollador Full Stack",
-  location: "Argentina",
-  availability: "Disponible para proyectos freelance, consultoria y roles tecnicos.",
+  headline: "Ingeniero en Sistemas | Backend & Data",
+  location: "Buenos Aires, Argentina",
+  availability: "Disponible para proyectos backend, automatización, datos y despliegues cloud.",
   summary:
-    "Portfolio tecnico para centralizar CV, proyectos desplegados, demos y canales de contacto. Edita este texto con tu perfil profesional, foco tecnico y tipo de oportunidades que queres recibir.",
+    "Ingeniero en Sistemas con experiencia en desarrollo backend, procesamiento de datos y despliegue en la nube. Especializado en Python, Django, PostgreSQL y AWS, con formación en ciberseguridad y una base analítica construida desde Ciencia de Datos y Física.",
   email: "davee183@gmail.com",
   phone: "+54 9 11 3003-0986",
   cvUrl: "/docs/David_Kuo_CV.pdf",
@@ -34,56 +41,126 @@ export const profile = {
   ] satisfies Link[],
 };
 
+export const metrics = [
+  { value: "4", label: "demos publicadas" },
+  { value: "2021", label: "inicio profesional" },
+  { value: "AWS", label: "despliegues cloud" },
+];
+
 export const skills = [
   {
-    area: "Frontend",
-    items: ["React", "TypeScript", "CSS moderno", "Vite", "UI responsive"],
+    area: "Lenguajes",
+    items: ["Python", "JavaScript", "SQL", "C++"],
   },
   {
     area: "Backend",
-    items: ["Node.js", "APIs REST", "Autenticacion", "Bases de datos"],
+    items: ["Django", "Node.js", "APIs REST", "PostgreSQL"],
   },
   {
-    area: "Producto",
-    items: ["Demos deployadas", "MVPs", "Integraciones", "Documentacion tecnica"],
+    area: "Datos",
+    items: ["Pandas", "ETL", "Análisis de datos", "Procesamiento de datos"],
+  },
+  {
+    area: "Cloud & DevOps",
+    items: ["AWS", "Docker", "Linux", "Git"],
+  },
+  {
+    area: "Frontend",
+    items: ["React", "TypeScript", "Vite", "UI responsive"],
+  },
+  {
+    area: "Seguridad",
+    items: ["Hacking ético", "OWASP Top 10", "Kali Linux", "Testing"],
   },
 ];
 
-export const experience = [
+export const experience: Experience[] = [
   {
-    title: "Rol o experiencia destacada",
-    organization: "Empresa / Cliente",
-    period: "2024 - Actualidad",
-    description:
-      "Resume aca responsabilidades, impacto medible, stack usado y tipo de producto construido.",
+    company: "InfoIntelligent",
+    role: "Ingeniero en Sistemas",
+    period: "2021 - Actualidad",
+    bullets: [
+      "Desarrollo de soluciones empresariales de automatización documental.",
+      "Implementación de sistemas backend con Python y JavaScript.",
+      "Procesamiento de grandes volúmenes de datos.",
+    ],
   },
   {
-    title: "Proyecto independiente",
-    organization: "Freelance / Personal",
+    company: "Freelance",
+    role: "Desarrollador Backend (Salud)",
+    period: "2021 - Actualidad",
+    bullets: [
+      "Desarrollo de aplicaciones con Django para gestión de datos médicos.",
+      "Diseño de bases PostgreSQL con información a nivel nacional.",
+      "Despliegue en AWS con arquitectura escalable.",
+    ],
+  },
+  {
+    company: "Remitz",
+    role: "Desarrollador de Software",
     period: "2023 - 2024",
-    description:
-      "Agrega otra experiencia relevante: automatizaciones, dashboards, e-commerce, sistemas internos o integraciones.",
+    bullets: [
+      "Desarrollo de soluciones de automatización e IA con Python.",
+      "Despliegue de aplicaciones en Docker.",
+      "Procesamiento y análisis de datos.",
+    ],
   },
 ];
+
+export const education = [
+  {
+    title: "Licenciatura en Ciencias de Datos",
+    institution: "Universidad de Buenos Aires",
+    period: "2021 - Actualidad",
+  },
+  {
+    title: "Licenciatura en Ciencias Físicas",
+    institution: "Universidad de Buenos Aires",
+    period: "2016 - Actualidad",
+  },
+];
+
+export const courses = [
+  "Curso de Hacking Ético (en curso)",
+  "Fundamentos de seguridad informática",
+  "Análisis de vulnerabilidades (OWASP Top 10)",
+  "Prácticas con Kali Linux y entornos de testing",
+];
+
+export const languages = ["Español nativo", "Inglés intermedio", "Portugués intermedio", "Chino básico"];
 
 export const projects: Project[] = [
+  {
+    title: "Registro Médico",
+    role: "Sistema demo de gestión médica",
+    status: "Demo activa",
+    period: "2026",
+    description:
+      "Demo web para registrar, consultar y administrar información médica. Muestra una interfaz operativa enfocada en carga de datos, organización de registros y flujos administrativos sensibles.",
+    highlights: [
+      "Ambiente público para evaluar el flujo principal.",
+      "Interfaz orientada a carga, consulta y administración de registros.",
+      "Base preparada para documentar autenticación, permisos, auditoría y persistencia.",
+    ],
+    technologies: ["React", "Vercel", "UI responsive", "Gestión de datos"],
+    demoUrl: "http://demo-registromedico.vercel.app/",
+    imageUrl: "/images/demos/registro-medico.png",
+  },
   {
     title: "Prode Mundial 2026",
     role: "Producto web demo",
     status: "Demo activa",
     period: "2026",
     description:
-      "Aplicacion demo para gestionar predicciones del Mundial 2026. Ideal para mostrar arquitectura de producto, flujo de usuario, manejo de estados, persistencia y despliegue en Vercel.",
+      "Aplicación para gestionar predicciones del Mundial 2026. Permite mostrar arquitectura de producto, flujo de usuario, manejo de estado, persistencia y despliegue en Vercel.",
     highlights: [
-      "Demo publica lista para evaluar el flujo completo.",
-      "Pensado para quinielas, grupos de amigos o comunidades.",
-      "Base editable para documentar autenticacion, reglas de puntaje y administracion.",
+      "Demo pública lista para evaluar el flujo completo.",
+      "Pensada para quinielas, grupos de amigos o comunidades.",
+      "Base editable para documentar reglas de puntaje y administración.",
     ],
     technologies: ["React", "TypeScript", "Vercel", "UI responsive"],
     demoUrl: "https://demo-prodemundial2026.vercel.app/",
-    repositoryUrl: "",
-    imageUrl:
-      "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1400&q=80",
+    imageUrl: "/images/demos/prode-mundial-2026.png",
   },
   {
     title: "Invitaciones Web AR",
@@ -91,16 +168,15 @@ export const projects: Project[] = [
     status: "Demo activa",
     period: "2026",
     description:
-      "Demo web orientada a invitaciones digitales para eventos. Permite presentar una propuesta visual, responsive y accesible para compartir informacion clave del evento desde un link publico.",
+      "Demo orientada a invitaciones digitales para eventos. Presenta una propuesta visual responsive para compartir información clave desde un enlace público.",
     highlights: [
-      "Landing demo publica para mostrar el producto final.",
-      "Enfoque en experiencia mobile y acceso rapido desde enlaces compartidos.",
-      "Base editable para adaptar estilos, contenido y secciones por evento.",
+      "Landing pública para mostrar el producto final.",
+      "Experiencia mobile-first para enlaces compartidos.",
+      "Estructura adaptable por evento, estilo y contenido.",
     ],
     technologies: ["React", "Vercel", "UI responsive", "Landing page"],
     demoUrl: "https://demo-invitacionesweb.vercel.app/",
-    imageUrl:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80",
+    imageUrl: "/images/demos/invitaciones-web-ar.png",
   },
   {
     title: "IBIMCE",
@@ -108,56 +184,37 @@ export const projects: Project[] = [
     status: "Demo activa",
     period: "2026",
     description:
-      "Pagina web institucional para la iglesia IBIMCE. El proyecto funciona como presencia digital publica, con informacion centralizada para visitantes, comunidad y canales de contacto.",
+      "Página web institucional para la iglesia IBIMCE. Centraliza presencia digital, información para visitantes, comunidad y canales de contacto.",
     highlights: [
       "Sitio publicado con dominio propio.",
-      "Estructura pensada para comunicar identidad, actividades e informacion de contacto.",
-      "Proyecto editable para sumar secciones, contenido multimedia o integraciones.",
+      "Estructura pensada para comunicar identidad, actividades y contacto.",
+      "Proyecto extensible para sumar secciones, contenido multimedia o integraciones.",
     ],
     technologies: ["Sitio institucional", "Dominio propio", "UI responsive"],
     demoUrl: "https://ibimce.com.ar",
-    imageUrl:
-      "https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&w=1400&q=80",
+    imageUrl: "/images/demos/ibimce.png",
   },
   {
-    title: "Registro Medico",
-    role: "Sistema demo de gestion medica",
-    status: "Demo activa",
-    period: "2026",
-    description:
-      "Demo web para registrar y consultar informacion medica. Sirve para mostrar flujos de carga de datos, organizacion de registros, interfaz operativa y criterios de usabilidad en un contexto administrativo sensible.",
-    highlights: [
-      "Ambiente demo publico para evaluar el flujo principal.",
-      "Interfaz orientada a carga, consulta y administracion de registros.",
-      "Base editable para documentar autenticacion, permisos, auditoria y persistencia.",
-    ],
-    technologies: ["React", "Vercel", "UI responsive", "Gestion de datos"],
-    demoUrl: "http://demo-registromedico.vercel.app/",
-    imageUrl:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80",
-  },
-  {
-    title: "Proxima demo",
+    title: "Próxima demo",
     role: "Ambiente demo pendiente",
     status: "Por levantar",
-    period: "Proximo deploy",
+    period: "Próximo deploy",
     description:
-      "Slot editable para el proximo proyecto que quieras mostrar: dashboard, automatizacion, API, backoffice, e-commerce o integracion.",
+      "Slot editable para el próximo proyecto: dashboard, automatización, API, backoffice, e-commerce o integración.",
     highlights: [
       "Definir objetivo del proyecto.",
-      "Agregar URL de demo cuando este desplegada.",
-      "Indicar decisiones tecnicas y tradeoffs.",
+      "Agregar URL de demo cuando esté desplegada.",
+      "Indicar decisiones técnicas y criterios de implementación.",
     ],
-    technologies: ["Stack pendiente", "Documentacion pendiente"],
-    nextStep: "Completar descripcion y preparar deploy publico.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
+    technologies: ["Stack pendiente", "Documentación pendiente"],
+    nextStep: "Completar descripción y preparar deploy público.",
+    imageUrl: "/images/demos/registro-medico.png",
   },
 ];
 
 export const services = [
-  "Desarrollo de aplicaciones web y demos tecnicas.",
-  "Construccion de MVPs con foco en validacion rapida.",
-  "Integracion de APIs, autenticacion y paneles de administracion.",
-  "Mejora de interfaces existentes y documentacion para handoff.",
+  "Desarrollo backend con Python, Django, Node.js y APIs REST.",
+  "Modelado de bases PostgreSQL y procesamiento de datos.",
+  "Automatización documental, ETL y soluciones internas.",
+  "Despliegues en AWS, Docker y entornos Linux.",
 ];
