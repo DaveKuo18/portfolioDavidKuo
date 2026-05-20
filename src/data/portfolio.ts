@@ -121,7 +121,7 @@ export const education = [
 ];
 
 export const courses = [
-  "Curso de Hacking Ético (en curso)",
+  "Curso de Hacking Ético",
   "Fundamentos de seguridad informática",
   "Análisis de vulnerabilidades (OWASP Top 10)",
   "Prácticas con Kali Linux y entornos de testing",
@@ -193,22 +193,6 @@ export const projects: Project[] = [
     technologies: ["Sitio institucional", "Dominio propio", "UI responsive"],
     demoUrl: "https://ibimce.com.ar",
     imageUrl: "/images/demos/ibimce.png",
-  },
-  {
-    title: "Próxima demo",
-    role: "Ambiente demo pendiente",
-    status: "Por levantar",
-    period: "Próximo deploy",
-    description:
-      "Slot editable para el próximo proyecto: dashboard, automatización, API, backoffice, e-commerce o integración.",
-    highlights: [
-      "Definir objetivo del proyecto.",
-      "Agregar URL de demo cuando esté desplegada.",
-      "Indicar decisiones técnicas y criterios de implementación.",
-    ],
-    technologies: ["Stack pendiente", "Documentación pendiente"],
-    nextStep: "Completar descripción y preparar deploy público.",
-    imageUrl: "/images/demos/registro-medico.png",
   },
 ];
 
