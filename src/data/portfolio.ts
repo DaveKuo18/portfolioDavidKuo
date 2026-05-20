@@ -24,13 +24,13 @@ export const profile = {
   availability: "Disponible para proyectos freelance, consultoria y roles tecnicos.",
   summary:
     "Portfolio tecnico para centralizar CV, proyectos desplegados, demos y canales de contacto. Edita este texto con tu perfil profesional, foco tecnico y tipo de oportunidades que queres recibir.",
-  email: "tu.email@dominio.com",
-  phone: "+54 9 11 0000-0000",
+  email: "davee183@gmail.com",
+  phone: "+54 9 11 3003-0986",
   cvUrl: "/docs/David_Kuo_CV.pdf",
   photoUrl: "/images/Io.jpg",
   links: [
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/tu-usuario" },
-    { label: "GitHub", href: "https://github.com/tu-usuario" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/davidnkuo/" },
+    { label: "GitHub", href: "https://github.com/DaveKuo18/" },
   ] satisfies Link[],
 };
 
@@ -118,6 +118,23 @@ export const projects: Project[] = [
     demoUrl: "https://ibimce.com.ar",
     imageUrl:
       "https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&w=1400&q=80",
+  },
+  {
+    title: "Registro Medico",
+    role: "Sistema demo de gestion medica",
+    status: "Demo activa",
+    period: "2026",
+    description:
+      "Demo web para registrar y consultar informacion medica. Sirve para mostrar flujos de carga de datos, organizacion de registros, interfaz operativa y criterios de usabilidad en un contexto administrativo sensible.",
+    highlights: [
+      "Ambiente demo publico para evaluar el flujo principal.",
+      "Interfaz orientada a carga, consulta y administracion de registros.",
+      "Base editable para documentar autenticacion, permisos, auditoria y persistencia.",
+    ],
+    technologies: ["React", "Vercel", "UI responsive", "Gestion de datos"],
+    demoUrl: "http://demo-registromedico.vercel.app/",
+    imageUrl:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Proxima demo",
